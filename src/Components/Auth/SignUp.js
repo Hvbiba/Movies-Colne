@@ -45,7 +45,7 @@ export default function SignUp(){
     });
     return(
         <>
-        <div className="conatainer m-auto w-100  d-flex justify-content-center align-items-center my-5" id="register">
+        <div className="conatainer m-auto w-100  d-flex justify-content-center align-items-center  mt-3 mb-5" id="register">
              {/* form handle submite && each input handle Blur , chan , set value same as object*/}
             <form className="bg-dark px-5 py-4" onSubmit={formik.handleSubmit}>
                 <div className="mb-3">
@@ -109,8 +109,8 @@ export default function SignUp(){
                         onBlur={formik.handleBlur}
                     />
                 </div>
-                {formik.errors.password && formik.touched.password &&
-                    <div className="alert alert-danger" role="alert">{formik.errors.password}</div>
+                {formik.errors.age && formik.touched.age &&
+                    <div className="alert alert-danger" role="alert">{formik.errors.age}</div>
                 }
                 <div className="mb-3">
                     <label htmlFor="password" className="form-label">Password</label>
@@ -125,9 +125,10 @@ export default function SignUp(){
                         onBlur={formik.handleBlur}
                     />
                 </div>
-                {formik.errors.age && formik.touched.age &&
-                    <div className="alert alert-danger" role="alert">{formik.errors.age}</div>
+                 {formik.errors.password && formik.touched.password &&
+                    <div className="alert alert-danger" role="alert">{formik.errors.password}</div>
                 }
+              
                 <button type="submit" className="btn btn-danger">Register</button>
             </form>
         </div>
